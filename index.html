@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAD</title>
+    <link rel="stylesheet" href="style.css"> <!-- Подключение CSS -->
+
+</head>
+<body>
+    <!-- шапка -->
+    <header class="header d-none containerMini" id="header">
+        <button id="clouseSettings" class="clouseSettings d-none">➜</button>
+        <div class="photoNameBlok">
+            <img src="" id="photo" alt="Аватар">
+            <span id="name"></span>
+        </div>
+
+        <button id="settings"><img src="img/settings.png" alt="Настройки"></button>
+        <button id="settingsProfile" class="d-none"><img src="img/settings.png" alt="Настройки"></button>
+        <div id="optionsProfile" class=" optionsProfile d-none">
+            <div class="circleOption"></div>
+            <div class="circleOption"></div>
+            <div class="circleOption"></div>
+        </div>
+    </header>
+
+    <!-- авторизация -->
+    <div id="avtorization" class="container avtorization">
+        <h1>VAD</h1>
+        <div class="blok-tel">
+            <p>
+                Введите ваш номер телефона
+            </p>
+            <input type="tel" name="tel" id="InputTel" maxlength="18" value="+7" />
+        </div>
+
+        <button id="StartAvtoriz"><span>➜</span></button>
+    </div>
+    <!-- главная -->
+    <div id="main" class="container main d-none">
+        <div class="blok-menu">
+            <div class="button-menu activeMenu" id="massage-button" type="submit">
+                <span class="">Сообщения</span>
+            </div>
+            <div class="button-menu" id="chanel-button" type="submit">
+                <span class="">Каналы</span>
+            </div>
+        </div>
+        <div class="dialogsMainBlok">
+            <div class="dialogsMain" id="dialogsMain">
+                <div id="dialogsPhotoBlok" class="dialogsPhotoBlok bgcOsnova">
+                    <img class="twelwpx" src="img/bookmark.png" alt="" />
+                </div>
+                <div class="dialogsMainText">
+                    <p class="dialogsMainTextH">
+                        Избранное
+                    </p>
+                    <p class="dialogsMainTextP">
+                        Ваше личное хранилище
+                    </p>
+                </div>
+                <div class="dialogsMainTime">
+                </div>
+            </div>
+
+        </div>
+
+        <button class="footerButtons" id="buttonFriends"><img src="img/friends.png">Друзья</button>
+        <button class="footerButtons" id="buttonSearch"><img src="img/search.png">Поиск</button>
+    </div>
+
+
+    <!-- настройки -->
+    <div id="settingsBlok"
+        class="settingsBlok container d-none">
+        <div class="blokForSettings">
+            <p class="textSettings1">
+                тут будут настройки:р
+            </p>
+            <span id="namberTel" class="textSettings2 d-none">89517374207</span>
+
+
+        </div>
+        <button id="exit" class="exit">ВЫЙТИ</button>
+        <button id="saveSettings" class="saveSettings" type="submit">сохранить</button>
+    </div>
+
+    <!-- профиль -->
+    <div class="blokProfile d-none" id="blokProfile">
+        <div class="photoProfile" alt="">
+        </div>
+        <div class="infoProfile container">
+            <div id="profileAddfriendMassage" class="profileAddfriendMassage d-none">
+
+                <div data-tel="+7 (980) 519-29-32" id="profileMassage" class="profileMassage open-dialog">
+                    <p>
+                        Сообщение
+                    </p>
+                </div>
+                <div id="profileAddFriend" class="profileMassage">
+                    <p>
+                        Добавить
+                    </p>
+                </div>
+
+            </div>
+            <span class="profileName">Максим Усанов</span>
+        </div>
+
+    </div>
+
+    <!-- редактор профиля -->
+
+    <div id="redactorProfile" class="redactorProfile container d-none">
+        <div class="redactorInputPhotoBlok">
+            <div id="redactPhotoProfile" class="redactPhotoProfile">
+            </div>
+            <div class="redactInputBlok">
+                <input type="text" value="" class="inputRedact" id="redactInputName" />
+                <input type="text" value="" class="inputRedact" id="redactInputSurname" />
+            </div>
+
+        </div>
+        <button id="redactBtnSave" class="redactBtnSave">Сохранить</button>
+
+    </div>
+
+
+    <!-- поиск -->
+    <div class="blokSearch container d-none" id="blokSearch">
+        <div class="serchInputBtn">
+            <input class="InputSearch" name="InputSearch" id="SearchUserInput" placeholder="Поиск" />
+            <button id="SerchUserBtn" class="SerchUserBtn" type="submit">Поиск</button>
+        </div>
+
+        <div class="resultSearch" id="resultSearch">
+
+        </div>
+    </div>
+
+    <!-- Друзья -->
+    <div class="blokFriends container d-none" id="blokFriends">
+        <input class="InputSearch" name="InputSearch" id="InputFriends" placeholder="Поиск" />
+        <div class="resultSearch" id="resultSearch">
+            нет друзей
+        </div>
+    </div>
+
+    <script type="module" src="firebaseService.js"></script>
+    <script type="module" src="js/avtor.js">
+    </script>
+    <script type="module" src="js/app.js"></script>
+
+    <!-- диалог -->
+    <div id="blokDialog" class="blokDialog container d-none">
+        <div id="outputMassangeBlok">
+
+        </div>
+        <div id="inputMessangeblok">
+            <div class="btnAddFile">
+                <img class="wh30px" src="img/clip.png" alt="" />
+            </div>
+            <input id="inputMessange" placeholder="Сообщение" />
+            <div id="sendMessange">
+                <img src="img/send-message.png" class="wh30px" alt="" />
+            </div>
+        </div>
+    </div>
+
+
+
+</body>
+                  </html>
